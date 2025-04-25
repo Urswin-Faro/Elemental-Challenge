@@ -20,20 +20,10 @@ document.addEventListener('click', (e) => {
 
 // Ensure menu covers full screen when opened
 function setupMenuFullscreen() {
-  menu.style.position = 'fixed';
-  menu.style.top = '0';
-  menu.style.left = '0';
-  menu.style.width = '100vw';
-  menu.style.height = '100vh';
-  menu.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'; // Semi-transparent
-  menu.style.backdropFilter = 'blur(5px)'; // Optional: nice blur effect
-  menu.style.flexDirection = 'column';
-  menu.style.justifyContent = 'center';
-  menu.style.alignItems = 'center';
-  menu.style.zIndex = '1001';
-  menu.style.transition = 'opacity 0.3s ease';
+  menu.classList.add('menu-active');
 }
 setupMenuFullscreen();
+
 
 // CAROUSEL LOGIC
 const track = document.querySelector('.carousel-track');

@@ -137,7 +137,7 @@ nav img {
 
 .menu {
   display: none;
-  background-color: #061c2c;
+  background-color: #061c2c; /* changed from #061c2c to red */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -154,14 +154,15 @@ nav img {
 .menu a {
   padding: 20px;
   font-size: 2rem;
-  color: #00000026;
+  color: white; /* changed from #00000026 to white */
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
 .menu a:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1); /* light transparent white on hover */
 }
+
 
 .close-menu {
   position: absolute;
@@ -170,7 +171,7 @@ nav img {
   font-size: 2.5rem;
   font-weight: bold;
   cursor: pointer;
-  color: #061c2c;
+  color: white;
   z-index: 1002;
   transition: color 0.2s ease;
 }
@@ -506,9 +507,9 @@ nav img {
 /* Button Section */
 .buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent buttons from wrapping */
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-start; /* Align buttons to the left */
   width: 100%;
   max-width: 1300px; /* Adjusted from 1800px */
   margin: 0 auto 60px auto;
@@ -548,18 +549,13 @@ nav img {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
   .buttons {
-    flex-direction: column;
+    flex-direction: row; /* Keep buttons in a row even on smaller screens */
     align-items: center;
   }
 
   .btn {
-    width: 100%;
-    max-width: 300px;
+    width: 230px; /* Ensure buttons don't expand too much on mobile */
   }
 }
+
