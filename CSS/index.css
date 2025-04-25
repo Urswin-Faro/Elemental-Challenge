@@ -22,8 +22,8 @@ header {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  max-width: 1200px;
-  margin: 30px;
+  max-width: 1300px; /* updated */
+  margin: 30px auto;
   box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@ section {
   align-items: center;
   background-color: #fff;
   width: 100%;
-  max-width: 1800px;
+  max-width: 1300px; /* updated */
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -80,13 +80,13 @@ nav img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 30px; /* Increased padding for height */
+  padding: 70px 30px;
   background-color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100%;
-  max-width: 1630px;
+  max-width: 1300px; /* updated */
   margin: 0 auto;
   box-sizing: border-box;
   transition: padding 0.3s ease;
@@ -137,7 +137,7 @@ nav img {
 
 .menu {
   display: none;
-  background-color: #061c2c; /* Updated background color */
+  background-color: #061c2c;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -151,7 +151,6 @@ nav img {
   transition: opacity 0.3s ease;
 }
 
-/* Menu Links */
 .menu a {
   padding: 20px;
   font-size: 2rem;
@@ -180,7 +179,6 @@ nav img {
   color: #000;
 }
 
-
 .carausel {
   position: relative;
   overflow: hidden;
@@ -188,11 +186,9 @@ nav img {
   width: 80%; 
 }
 
-
 .carousel-track-container {
   overflow: hidden;
   position: relative;
-
 }
 
 .carousel-track {
@@ -204,7 +200,6 @@ nav img {
   min-width: 100%;
   transition: opacity 0.5s ease-in-out;
   object-fit: cover;
-
 }
 
 .carousel-btn {
@@ -219,27 +214,26 @@ nav img {
 
 .carousel-wrapper {
   position: relative;
-}
-
-.carousel-wrapper {
-  position: relative; /* Anchor point for absolute positioning inside the carousel */
+  width: 100%;
+  max-width: 1300px; /* updated */
+  margin: 0 auto;
 }
 
 .carousel-dots {
   position: absolute;
-  bottom: 2%;       /* Responsive spacing from the bottom */
-  right: 2%;         /* Moved from right to left */
+  bottom: 2%;
+  right: 2%;
   display: flex;
-  gap: 1vw;         /* Responsive gap between dots */
+  gap: 1vw;
   z-index: 10;
 }
 
 .dots {
-  width: 4vw;       /* Scales with viewport */
+  width: 4vw;
   height: 4vw;
-  max-width: 40px;  /* Optional: keeps dots from getting too big */
+  max-width: 40px;
   max-height: 40px;
-  min-width: 15px;  /* Optional: keeps dots visible on very small screens */
+  min-width: 15px;
   min-height: 15px;
   opacity: 0.4;
   cursor: pointer;
@@ -250,34 +244,10 @@ nav img {
   opacity: 1;
 }
 
-
-.carousel-wrapper {
-  width: 100%;
-  max-width: 100%; 
-  margin: 0 auto;
-  position: relative;
-}
-
-.carousel-track-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-slide {
-  width: 100%;
-  object-fit: contain;
-}
-
 .carousel-btn.next {
   position: absolute;
   top: 50%;
-  right: 10px; /* small spacing from the edge */
+  right: 10px;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -292,13 +262,13 @@ nav img {
   width: 100%;
   height: auto;
 }
+
 .carousel-slide:first-child img {
-  width: 1800px; 
+  width: 1800px;
   height: 700px;
   object-fit: cover;
 }
 
-/* Make the carousel and button responsive */
 @media (max-width: 768px) {
   .carousel-wrapper {
     max-width: 100%;
@@ -334,7 +304,6 @@ nav img {
   white-space: nowrap;
 }
 
-/* Responsive font adjustments */
 @media (max-width: 1024px) {
   .carousel-heading {
     font-size: 20px;
@@ -353,8 +322,6 @@ nav img {
   }
 }
 
-
-
 @keyframes slideInFromLeft {
   from {
     transform: translateX(-100%) translateY(-50%);
@@ -366,132 +333,72 @@ nav img {
   }
 }
 
-/* .main-slider styles */
+/* .main-slider stays full width — DO NOT MODIFY */
 .main-slider {
-    position: relative;
-    margin-bottom: 90px;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.main-slider:before,
+.main-slider:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -60px;
+  width: 50%;
+  height: 120px;
+  content: "";
+  display: block;
 }
 
 .main-slider:before {
-    left: 0;
-    top: 50%;
-    margin-top: -60px;
-    position: absolute;
-    width: 50%;
-    background-color: #244AC2;
-    display: block;
-    content: "";
-    height: 120px;
+  left: 0;
+  background-color: #244AC2;
 }
 
 .main-slider:after {
-    right: 0;
-    top: 50%;
-    margin-top: -60px;
-    position: absolute;
-    width: 50%;
-    background-color: #000000;
-    display: block;
-    content: "";
-    height: 120px;
+  right: 0;
+  background-color: #000000;
 }
 
 .main-slider .inner {
-    max-width: 1620px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
+  max-width: 1300px; /* updated */
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
 }
 
 .main-slider .inner > .next-slide {
-    position: absolute;
-    z-index: 20;
-    width: 101px;
-    height: 118px;
-    display: block;
-    background-image: url(image/slider-next.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right center;
-    top: 50%;
-    right: 110px; /* Positioned 110px from the right edge */
-    margin-top: -59px;
-    cursor: pointer;
-    transition: right 0.3s ease, width 0.3s ease; /* Smooth transition for both properties */
+  position: absolute;
+  z-index: 20;
+  width: 101px;
+  height: 118px;
+  display: block;
+  background-image: url(image/slider-next.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  top: 50%;
+  right: 110px;
+  margin-top: -59px;
+  cursor: pointer;
+  transition: right 0.3s ease, width 0.3s ease;
 }
 
 .main-slider .inner .next-slide:hover {
-    right: 85px; /* Adjusted hover position to be relative to the new default position */
-    width: 126px;
-}
-
-.main-slider .inner ul {
-    margin: 0;
-    padding: 0;
-    display: block;
-    overflow: hidden;
-}
-
-.main-slider .inner ul li {
-    height: 100%;
-    width: 100%;
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    transition: 1s;
-}
-
-.main-slider .inner ul li.active {
-    position: relative;
-    left: 0;
-    transition: 1s;
-    z-index: 8;
-}
-
-.main-slider .inner ul li.prev {
-    left: -100%;
-    transition: 1s;
-    transition-property: left;
-    transition-duration: 1s;
-    z-index: 4;
-}
-
-.main-slider .inner ul li.next {
-    left: 100%;
-    transition: 1s;
-    transition-property: left;
-    transition-duration: 0s;
-    z-index: 2;
+  right: 85px;
+  width: 126px;
 }
 
 .main-slider .inner ul li img {
-    display: block;
-    width: 80%; /* Reduced from 100% to center the image */
-    height: auto; /* Allow height to adjust proportionally */
-    margin: 0 auto; /* Center the image horizontally */
-    object-fit: contain; /* Ensure the image maintains its aspect ratio */
-    max-height: 600px; /* Set a maximum height to ensure consistency */
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  max-height: 600px;
 }
-
-.main-slider .inner ul li h3 {
-    left: -100%;
-    top: 50%;
-    margin-top: -60px;
-    position: absolute;
-    background-color: #244AC2;
-    display: block;
-    height: 120px;
-    padding-left: 60px;
-    padding-right: 100px;
-}
-
-
-
 /* Intro Section */
 .visio-container {
   position: relative;
@@ -502,16 +409,15 @@ nav img {
   justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 1800px; /* Matches typical carousel structure */
+  max-width: 1300px; /* Adjusted from 1800px */
   margin: 0 auto;
   box-sizing: border-box;
   margin-top: 10px;
   margin-bottom: 40px;
 }
 
-
 .visio-container p {
-  flex: 1 1 100px; /* Allows shrinking and growing */
+  flex: 1 1 100px;
   max-width: 62%;
   font-size: 24px;
   line-height: 36px;
@@ -546,7 +452,7 @@ nav img {
   }
 
   .visio-container img {
-    flex:  1 0px;
+    flex: 1 0px;
     max-width: 100%;
     height: auto;
   }
@@ -560,7 +466,7 @@ nav img {
   justify-content: center;
   padding: 20px;
   width: 100%;
-  max-width: 1800px; /* Same as carousel/visio */
+  max-width: 1300px; /* Adjusted from 1800px */
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -569,7 +475,7 @@ nav img {
   background-color: #001730;
   color: white;
   padding: 60px 20px 40px;
-  flex: 1 1 300px; /* Adjusted for better responsive scaling */
+  flex: 1 1 300px;
   position: relative;
   max-width: 484px;
   width: 100%;
@@ -604,7 +510,7 @@ nav img {
   gap: 10px;
   justify-content: center;
   width: 100%;
-  max-width: 1800px; /* Consistent structure */
+  max-width: 1300px; /* Adjusted from 1800px */
   margin: 0 auto 60px auto;
   padding: 0 20px;
   box-sizing: border-box;
